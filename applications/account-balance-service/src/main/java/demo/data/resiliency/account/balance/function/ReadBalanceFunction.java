@@ -5,6 +5,7 @@ import demo.data.resiliency.account.balance.repository.BalanceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.util.function.Function;
 
 @Component
@@ -15,6 +16,6 @@ public class ReadBalanceFunction implements Function<String, Balance> {
 
     @Override
     public Balance apply(String id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id).orElse(new Balance(id, BigDecimal.ZERO));
     }
 }

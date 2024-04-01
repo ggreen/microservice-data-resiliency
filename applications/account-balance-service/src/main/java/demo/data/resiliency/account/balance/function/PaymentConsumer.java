@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 
 @Component
 @RequiredArgsConstructor
-public class MakePaymentConsumer implements Consumer<Payment> {
+public class PaymentConsumer implements Consumer<Payment> {
 
     private final BalanceRepository repository;
     @Override

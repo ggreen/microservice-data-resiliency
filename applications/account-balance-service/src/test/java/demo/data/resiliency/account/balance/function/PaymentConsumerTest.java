@@ -21,9 +21,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class MakePaymentConsumerTest {
+class PaymentConsumerTest {
 
-    private MakePaymentConsumer subject;
+    private PaymentConsumer subject;
     private final Payment payment = JavaBeanGeneratorCreator.of(Payment.class).create();
 
     @Mock
@@ -32,7 +32,7 @@ class MakePaymentConsumerTest {
 
     @BeforeEach
     void setUp() {
-        subject = new MakePaymentConsumer(repository);
+        subject = new PaymentConsumer(repository);
     }
 
     @DisplayName("Given No Existing Balance When Accept Then Return Not Empty Balance")
