@@ -1,7 +1,7 @@
 spring:
   cloud:
     function:
-      definition: readBalanceFunction;saveBalanceConsumer
+      definition: readBalanceFunction;makePaymentConsumer
       http:
         GET: readBalanceFunction
-        POST: saveBalanceConsumer
+        POST: makePaymentConsumer

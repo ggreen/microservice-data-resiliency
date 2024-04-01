@@ -1,8 +1,8 @@
 package demo.data.resiliency.account.balance.function;
 
 import demo.data.resiliency.account.balance.domain.Balance;
+import demo.data.resiliency.account.balance.repository.BalanceRepository;
 import nyla.solutions.core.patterns.creational.generator.JavaBeanGeneratorCreator;
-import nyla.solutions.core.patterns.repository.FindByIdRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,7 +22,7 @@ class ReadBalanceFunctionTest {
     private String accountId = "test";
     private Balance expected;
     @Mock
-    private FindByIdRepository repository;
+    private BalanceRepository repository;
 
     @BeforeEach
     void setUp() {

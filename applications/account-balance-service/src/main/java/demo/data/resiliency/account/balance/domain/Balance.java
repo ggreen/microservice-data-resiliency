@@ -1,5 +1,12 @@
 package demo.data.resiliency.account.balance.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+
+import java.math.BigDecimal;
+
 /**
  *  "AccountId": "22289",
  *         "Amount": {
@@ -7,5 +14,5 @@ package demo.data.resiliency.account.balance.domain;
  *           "Currency": "GBP"
  *         }
  */
-public record Balance(String id, Amount amount) {
+public record Balance(@Id  String id, BigDecimal amount){
 }
