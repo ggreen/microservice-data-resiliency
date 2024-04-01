@@ -20,23 +20,10 @@ spring:
         readBalanceFunction-in-0:
           destination: readBalance
           group: ${spring.application.name}
-#          consumer:
-#            autoBindDlq: true
-#            quorum.enabled: true
-#            dlqQuorum:
-#              enabled: true
-#            prefetch: 10000
         readBalanceFunction-out-0:
           destination: balance
         paymentConsumer-in-0:
-          destination: payments
+          destination: payment
           group: ${spring.application.name}
-
-#          consumer:
-#            autoBindDlq: true
-#            quorum.enabled: true
-#            dlqQuorum:
-#              enabled: true
-#            prefetch: 10000
   rabbitmq:
     username: rabbit
